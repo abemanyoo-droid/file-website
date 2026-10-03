@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>ManyooKopi — Racikan dari Dapur Kami ke Meja Anda</title>
+<meta name="description" content="ManyooKopi menyajikan kopi dan minuman racikan premium, dibuat segar setiap hari dari bahan pilihan.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ManyooKopi — Racikan dari Dapur Kami ke Meja Anda">
+<meta property="og:description" content="ManyooKopi menyajikan kopi dan minuman racikan premium, dibuat segar setiap hari dari bahan pilihan.">
+<meta property="og:site_name" content="ManyooKopi">
+<meta property="og:image" content="assets/images/og/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ManyooKopi — Racikan dari Dapur Kami ke Meja Anda">
+<meta name="twitter:description" content="ManyooKopi menyajikan kopi dan minuman racikan premium, dibuat segar setiap hari dari bahan pilihan.">
+<meta name="twitter:image" content="assets/images/og/og-image.png">
+<!-- Catatan: og:image/twitter:image di atas memakai placeholder yang sudah dibuatkan (assets/images/og/og-image.png). Saat website sudah online, ganti "assets/images/og/og-image.png" dengan URL absolut (mis. https://manyoo.id/assets/images/og/og-image.png) — WhatsApp/Instagram tidak bisa membaca path relatif — dan idealnya ganti juga dengan foto produk/logo asli. -->
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://manyoo.id/">
+<!-- Catatan: ganti "https://manyoo.id/" dengan domain asli begitu sudah live -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101A30'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='38' fill='%23EDEBE1' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#14213D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Courgette&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/typeface-glacial-indifference/index.css" rel="stylesheet">
+<!-- Catatan font "Glacial Indifference": font ini bukan bagian dari Google Fonts, jadi disematkan lewat CDN jsDelivr (paket "typeface-glacial-indifference", lisensi bebas pakai) khusus untuk teks paragraf deskripsi. -->
+<style>
+  :root{ --desc-font: 'Glacial Indifference', var(--sans); }
+  p{ font-family: var(--desc-font); }
+</style>
+<!-- Catatan font: Kilimanjaro Sans, Larosa Sans, dan Brisca adalah font berbayar (Creative Market / MyFonts / Creative Fabrica), belum tersedia gratis lewat Google Fonts sehingga tidak bisa langsung disematkan di sini tanpa file lisensinya. Font judul sekarang memakai Fraunces (serif display dengan italic yang lembut/"wonky", cocok dengan gaya italic yang sudah dipakai di logo & menu), dan Instrument Sans tetap dipakai untuk isi teks. Jika Anda sudah membeli salah satu font aslinya, kirim file .woff2/.otf-nya dan saya bisa pasang lewat @font-face. -->
+
+<style>
+  :root{
+    --ink:#14213D;
+    --bark:#101A30;
+    --oat:#EDEBE1;
+    --cream:#F5F3EC;
+    --copper:#2A58B6;
+    --copper-dark:#1F4390;
+    --moss:#C9A227;
+    --line: rgba(20,33,61,0.14);
+    --line-on-dark: rgba(237,235,225,0.16);
+    --shadow: 0 18px 40px rgba(16,26,48,0.16);
+    --radius: 4px;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --script: 'Courgette', cursive;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --oat:#DAD7C9;
+      --cream:#E7E4D8;
+    }
+  }
+  :root[data-theme="dark"]{
+    --oat:#DAD7C9;
+    --cream:#E7E4D8;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    font-weight:500;
+    color:var(--ink);
+    background:var(--oat);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .band-dark{background:var(--bark);color:var(--oat);}
+  .band-cream{background:var(--cream);}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05;}
+  p{line-height:1.6;}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--sans);font-weight:600;font-size:0.95rem;
+    padding:13px 26px;border-radius:2px;border:1px solid transparent;
+    cursor:pointer;text-decoration:none;transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .btn:focus-visible{outline:2px solid var(--copper);outline-offset:3px;}
+  .btn-copper{background:var(--copper);color:var(--cream);}
+  .btn-copper:hover{background:var(--copper-dark);transform:translateY(-1px);}
+  .btn-outline{background:transparent;border-color:currentColor;}
+  .btn-outline:hover{background:rgba(42,88,182,0.12);}
+  .btn-ghost{background:transparent;color:inherit;border-color:var(--line-on-dark);}
+  .btn-ghost:hover{background:rgba(237,235,225,0.08);}
+
+  /* ---------- HEADER ---------- */
+  header.site{
+    position:sticky;top:0;z-index:60;
+    border-bottom:1px solid var(--line-on-dark);
+  }
+  /* Blur dipindah ke pseudo-element supaya header tidak membentuk
+     containing block baru untuk elemen position:fixed di dalamnya
+     (menu mobile) — kalau backdrop-filter langsung di header, menu
+     mobile jadi terpotong hanya sebatas tinggi header. */
+  header.site::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:rgba(16,26,48,0.94);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 0;color:var(--oat);
+  }
+  .brand{
+    font-family:var(--serif);font-style:italic;font-weight:700;font-size:1.7rem;
+    letter-spacing:0.01em;text-decoration:none;color:var(--oat);
+  }
+  .nav-links{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0;}
+  .nav-links a{font-size:0.93rem;text-decoration:none;color:var(--oat);opacity:0.88;transition:opacity .15s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{display:flex;align-items:center;gap:18px;}
+  .hamburger{display:none;background:none;border:none;color:var(--oat);cursor:pointer;padding:6px;}
+  .hamburger svg{width:24px;height:24px;}
+
+  @media (max-width:920px){
+    .nav-links{
+      position:fixed;inset:64px 0 0 0;background:var(--bark);
+      flex-direction:column;align-items:flex-start;gap:0;
+      padding:10px 28px 28px;
+      transform:translateX(100%);transition:transform .3s ease;
+      overflow-y:auto;
+    }
+    .nav-links.open{transform:translateX(0);}
+    .nav-links li{width:100%;border-bottom:1px solid var(--line-on-dark);}
+    .nav-links a{display:block;padding:16px 0;font-size:1.05rem;}
+    .nav-cta .btn-outline{display:none;}
+    .hamburger{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:min(88vh,760px);
+    display:flex;align-items:flex-end;overflow:hidden;
+    background:var(--bark);color:var(--cream);
+  }
+  .hero-slide{
+    position:absolute;inset:0;opacity:0;transition:opacity 1s ease;
+    display:flex;align-items:center;
+  }
+  .hero-slide.active{opacity:1;}
+  .hero-slide .art{position:absolute;inset:0;}
+  .hero-slide .art-photo{object-position:center;}
+  @media (max-width:600px){
+    .hero{min-height:min(62vh,560px);}
+  }
+
+  /* Lapisan gelap (scrim) di atas foto — hanya cukup untuk menjaga
+     keterbacaan teks putih, foto tetap terlihat jelas, tidak digelapkan
+     merata dan tidak diburamkan. */
+  .hero-slide::after{
+    content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:
+      linear-gradient(to top, rgba(6,11,22,0.60) 0%, rgba(6,11,22,0.36) 28%, rgba(6,11,22,0.10) 54%, rgba(6,11,22,0) 76%),
+      linear-gradient(to right, rgba(6,11,22,0.32) 0%, rgba(6,11,22,0.10) 40%, rgba(6,11,22,0) 65%);
+  }
+
+  .hero-inner{position:relative;z-index:2;padding:0 28px 90px;max-width:1180px;margin:0 auto;width:100%;}
+
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    color:#FFFFFF;font-weight:700;font-size:0.78rem;
+    text-transform:uppercase;letter-spacing:0.18em;margin-bottom:18px;
+    text-shadow:0 1px 3px rgba(6,11,22,0.9), 0 1px 14px rgba(6,11,22,0.7);
+  }
+  .hero-eyebrow::before{
+    content:"";width:34px;height:2px;background:#FFFFFF;
+    display:inline-block;border-radius:2px;opacity:0.9;
+  }
+
+  .hero h1{
+    color:#FFFFFF;font-size:clamp(2.2rem,5vw,3.8rem);max-width:20ch;
+    line-height:1.15;letter-spacing:-0.01em;
+    text-shadow:0 1px 4px rgba(6,11,22,0.95), 0 2px 30px rgba(6,11,22,0.85), 0 1px 3px rgba(6,11,22,0.6);
+  }
+  .hero h1 em{
+    font-style:italic;color:var(--copper);opacity:1;
+    text-shadow:0 1px 4px rgba(6,11,22,0.95), 0 2px 30px rgba(6,11,22,0.85);
+  }
+  .hero p{
+    color:rgba(255,255,255,0.94);max-width:46ch;margin-top:20px;font-size:1.08rem;
+    line-height:1.65;text-shadow:0 1px 3px rgba(6,11,22,0.9), 0 1px 16px rgba(6,11,22,0.75);
+  }
+  .hero-actions{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap;}
+
+  /* Tombol di atas foto: putih solid + garis tegas biar tidak tenggelam */
+  .hero-actions .btn-copper{
+    background:#FFFFFF;color:#14213D;font-weight:700;
+    box-shadow:0 10px 26px rgba(6,11,22,0.45);
+  }
+  .hero-actions .btn-copper:hover{background:#EDEBE1;color:#14213D;}
+  .hero-actions .btn-ghost{
+    background:rgba(6,11,22,0.32);color:#FFFFFF;
+    border-color:rgba(255,255,255,0.65);backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);font-weight:600;
+  }
+  .hero-actions .btn-ghost:hover{background:rgba(6,11,22,0.72);border-color:#FFFFFF;}
+
+  .hero-dots{
+    position:absolute;bottom:32px;right:28px;z-index:3;
+    display:flex;gap:10px;
+  }
+  .hero-dot{
+    width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.4);
+    border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s;
+    box-shadow:0 1px 6px rgba(6,11,22,0.55);
+  }
+  .hero-dot:hover{background:rgba(255,255,255,0.75);}
+  .hero-dot.active{background:#FFFFFF;transform:scale(1.25);}
+
+  .hero-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+    background:rgba(8,14,28,0.55);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    width:44px;height:44px;border-radius:50%;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:background .2s;
+  }
+  .hero-arrow:hover{background:rgba(8,14,28,0.85);border-color:#FFFFFF;}
+  .hero-arrow.prev{left:28px;} .hero-arrow.next{right:28px;}
+  @media (max-width:720px){ .hero-arrow{display:none;} }
+
+  /* ---------- STORY SECTION ---------- */
+  .story{padding:100px 0;}
+  .story .wrap{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center;}
+  .story h2{font-size:clamp(2rem,4vw,2.8rem);max-width:14ch;margin-top:10px;}
+  .story > .wrap > .story-copy > p{margin-top:18px;max-width:50ch;color:rgba(20,33,61,0.78);}
+  /* Label "Cerita Kami" dipakai ulang dari gaya hero, tapi di sini latarnya
+     terang (krem) sehingga teks, garis kecil, dan bayangannya disesuaikan. */
+  .story-copy .hero-eyebrow{text-shadow:none;}
+  .story-copy .hero-eyebrow::before{background:#14213D;opacity:0.85;}
+  .story-pillars{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .story-pillars h3{font-size:1.15rem;font-style:normal;}
+  .story-pillars p{margin-top:8px;font-size:0.88rem;color:rgba(20,33,61,0.68);}
+  @media (max-width:860px){
+    .story .wrap{grid-template-columns:1fr;gap:40px;}
+    .story-pillars{grid-template-columns:1fr;}
+    .story-art{order:-1;}
+  }
+
+  /* ---------- FIND SECTION ---------- */
+  .find{padding:96px 0;}
+  .find .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;}
+  .find h2{font-size:clamp(2rem,4vw,2.9rem);max-width:12ch;}
+  .find p{margin-top:18px;max-width:42ch;color:rgba(20,33,61,0.78);}
+  .find .actions{margin-top:30px;}
+  .map-art{position:relative;}
+  @media (max-width:860px){
+    .find .wrap{grid-template-columns:1fr;gap:44px;}
+    .map-art{order:-1;}
+  }
+
+  /* ---------- PETA LOKASI (Leaflet) ---------- */
+  #lokasi-map{
+    width:100%; aspect-ratio:500/380; border-radius:14px; overflow:hidden;
+    box-shadow:var(--shadow); border:1px solid var(--line);
+    background:#DAD7C9;
+  }
+  .leaflet-popup-content-wrapper{border-radius:10px;font-family:var(--sans);}
+  .leaflet-popup-content{margin:12px 14px;font-size:0.86rem;line-height:1.5;color:var(--ink);}
+  .leaflet-popup-content b{font-family:var(--serif);font-size:1rem;font-style:italic;display:block;margin-bottom:2px;}
+  .mk-pin{display:flex;align-items:center;justify-content:center;width:34px;height:34px;
+    border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--copper);
+    box-shadow:0 3px 8px rgba(16,26,48,0.35);border:2px solid var(--cream);}
+  .mk-pin svg{transform:rotate(45deg);width:16px;height:16px;color:var(--cream);}
+  .mk-pin.soon{background:var(--moss);}
+  .location-card{cursor:pointer;}
+  .location-card.is-active{outline:2px solid var(--copper);outline-offset:2px;}
+
+  .location-grid{margin-top:64px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .location-card{
+    background:var(--cream);padding:28px 30px;border:1px solid var(--line);
+    border-radius:18px;display:flex;flex-direction:column;gap:10px;
+    box-shadow:0 1px 2px rgba(20,33,61,0.04);
+    transition:box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  }
+  .location-card:hover{
+    box-shadow:0 18px 40px rgba(20,33,61,0.12);transform:translateY(-3px);
+    border-color:rgba(42,88,182,0.35);
+  }
+  .location-card .badge{align-self:flex-start;}
+  .location-card h3{font-size:1.2rem;font-style:normal;margin-top:4px;}
+  .location-card .addr{
+    margin-top:2px;font-size:0.92rem;color:rgba(20,33,61,0.72);
+    display:flex;align-items:flex-start;gap:8px;line-height:1.5;
+  }
+  .location-card .addr svg{flex:none;width:16px;height:16px;margin-top:3px;color:var(--copper);}
+  .location-card .hours{
+    font-size:0.84rem;color:rgba(20,33,61,0.55);
+    display:flex;align-items:center;gap:8px;padding-top:10px;
+    border-top:1px solid var(--line);margin-top:4px;
+  }
+  .location-card .hours svg{flex:none;width:14px;height:14px;color:rgba(20,33,61,0.4);}
+  .badge{display:inline-block;font-size:0.72rem;font-weight:700;padding:4px 10px;background:rgba(42,88,182,0.12);color:var(--copper);border-radius:2px;}
+  .badge.soon{background:rgba(201,162,39,0.15);color:#8A6A16;}
+  .location-note{margin-top:26px;font-size:0.8rem;color:rgba(20,33,61,0.5);}
+  @media (max-width:640px){ .location-grid{grid-template-columns:1fr;} }
+
+  /* ---------- Warna khusus per kotak grid "Temukan ManyooKopi Terdekat" (versi buram/muted) ---------- */
+  /* Kotak 1: biru gelap buram (versi pudar dari warna header) */
+  .location-card.card-dark{
+    background:#4A5468;border-color:rgba(237,235,225,0.14);color:var(--oat);
+  }
+  .location-card.card-dark h3{color:var(--oat);}
+  .location-card.card-dark .addr{color:rgba(237,235,225,0.72);}
+  .location-card.card-dark .addr svg{color:rgba(237,235,225,0.8);}
+  .location-card.card-dark .hours{color:rgba(237,235,225,0.5);border-top-color:rgba(237,235,225,0.14);}
+  .location-card.card-dark .hours svg{color:rgba(237,235,225,0.45);}
+  .location-card.card-dark .badge{background:rgba(237,235,225,0.12);color:rgba(237,235,225,0.85);}
+  .location-card.card-dark:hover{border-color:rgba(237,235,225,0.32);}
+
+  /* Kotak 2: biru cerah buram (versi pudar dari chip tombol "Pesan Sekarang") */
+  .location-card.card-blue{
+    background:#7E93BE;border-color:#63779E;color:var(--cream);
+  }
+  .location-card.card-blue h3{color:var(--cream);}
+  .location-card.card-blue .addr{color:rgba(245,243,236,0.78);}
+  .location-card.card-blue .addr svg{color:rgba(245,243,236,0.85);}
+  .location-card.card-blue .hours{color:rgba(245,243,236,0.6);border-top-color:rgba(245,243,236,0.24);}
+  .location-card.card-blue .hours svg{color:rgba(245,243,236,0.58);}
+  .location-card.card-blue .badge{background:rgba(245,243,236,0.18);color:rgba(245,243,236,0.9);}
+  .location-card.card-blue:hover{border-color:rgba(245,243,236,0.7);}
+
+  /* Kotak 3: putih buram (versi lembut dari latar web ini) */
+  .location-card.card-white{background:#EFEDE4;color:var(--ink);}
+
+  /* Kotak 4 (Segera Hadir): abu-abu netral, sedikit efek glossy lembut */
+  .location-card.card-gold{
+    background:
+      radial-gradient(120% 140% at 22% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 46%),
+      #DBD9D6;
+    border-color:#B6B3AE;color:#3A3835;
+    box-shadow:0 1px 2px rgba(20,33,61,0.04), inset 0 1px 0 rgba(255,255,255,0.35);
+  }
+  .location-card.card-gold h3{color:#2E2C29;}
+  .location-card.card-gold .addr{color:rgba(58,56,53,0.72);}
+  .location-card.card-gold .addr svg{color:rgba(58,56,53,0.75);}
+  .location-card.card-gold .hours{color:rgba(58,56,53,0.6);border-top-color:rgba(58,56,53,0.18);}
+  .location-card.card-gold .hours svg{color:rgba(58,56,53,0.55);}
+  .location-card.card-gold .badge.soon{background:#FFFFB8;color:#5C4A00;}
+  .location-card.card-gold:hover{border-color:#8A8781;}
+
+  .menu-tabs{display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+  .menu-tab{
+    font-family:var(--sans);font-weight:600;font-size:0.9rem;
+    background:transparent;border:1px solid var(--line-on-dark);color:rgba(237,235,225,0.7);
+    padding:10px 20px;border-radius:20px;cursor:pointer;transition:background .2s,color .2s,border-color .2s;
+  }
+  .menu-tab.active{background:var(--copper);border-color:var(--copper);color:var(--cream);}
+  .menu-tab:not(.active):hover{border-color:var(--copper);color:var(--oat);}
+
+  /* ---------- MENU HIGHLIGHT ---------- */
+  .menu-h{padding:100px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:52px;flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(2rem,4vw,2.9rem);}
+  .section-head p{max-width:38ch;color:rgba(237,235,225,0.72);margin-top:12px;}
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-on-dark);border:1px solid var(--line-on-dark);}
+  .menu-card{background:var(--bark);padding:34px 28px;position:relative;transition:background .2s;}
+  .menu-card:hover{background:#1B2A4D;}
+  .menu-card .icon{width:44px;height:44px;margin-bottom:22px;color:var(--copper);}
+  /* Foto produk menu (opsional). Kalau file foto belum ada, foto dihapus
+     otomatis dan ikon SVG tetap tampil seperti semula. */
+  .menu-card{overflow:hidden;}
+  .menu-photo{
+    display:block;width:calc(100% + 56px);margin:-34px -28px 24px;
+    aspect-ratio:4/3;object-fit:cover;background:#0E1728;
+  }
+  .menu-card.has-photo .icon{display:none;}
+  .menu-card h3{color:var(--cream);font-size:1.5rem;font-style:normal;}
+  .menu-card .desc{color:rgba(237,235,225,0.68);font-size:0.92rem;margin-top:10px;min-height:44px;}
+  .menu-card .price{margin-top:20px;font-weight:600;color:var(--copper);font-size:0.95rem;}
+  @media (max-width:860px){ .menu-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .menu-grid{grid-template-columns:1fr;} }
+
+  /* ---------- FRANCHISE ---------- */
+  .franchise{padding:100px 0;}
+  .franchise .wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
+  .franchise h2{font-size:clamp(2rem,4vw,2.9rem);max-width:11ch;}
+  .franchise p{margin-top:18px;max-width:44ch;color:rgba(20,33,61,0.78);}
+  .franchise .actions{margin-top:30px;}
+  @media (max-width:860px){
+    .franchise .wrap{grid-template-columns:1fr;gap:44px;}
+    .franchise .art-wrap{order:-1;}
+  }
+
+  .testimoni{padding:96px 0;}
+  .testimoni-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .testimoni-card{background:var(--cream);padding:30px 26px;border:1px solid var(--line);}
+  .testimoni-card .quote-text{font-family:var(--script);font-style:normal;font-weight:400;font-size:1.35rem;color:var(--ink);line-height:1.5;}
+  .testimoni-card .who{margin-top:16px;font-size:0.82rem;color:rgba(20,33,61,0.6);}
+  @media (max-width:860px){ .testimoni-grid{grid-template-columns:1fr;} }
+
+  /* ---------- QUOTE ---------- */
+  .quote-band{padding:120px 0;text-align:center;}
+  .quote-band blockquote{
+    font-family:var(--script);font-style:normal;color:var(--cream);
+    font-size:clamp(1.5rem,4.4vw,2.9rem);max-width:18ch;margin:0 auto;line-height:1.4;
+  }
+  .quote-band cite{display:block;margin-top:24px;font-style:normal;font-size:0.85rem;color:rgba(237,235,225,0.6);font-family:var(--sans);}
+
+  .kontak{padding:110px 0;}
+  .kontak-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:flex-start;}
+  .kontak h2{font-size:clamp(2rem,4vw,2.8rem);max-width:12ch;}
+  .kontak p{margin-top:18px;max-width:42ch;color:rgba(20,33,61,0.78);}
+  .kontak-info{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:0.92rem;color:rgba(20,33,61,0.72);}
+  .kontak form{display:flex;flex-direction:column;gap:14px;}
+  .kontak form .row{display:flex;gap:14px;}
+  .kontak form input, .kontak form select, .kontak form textarea{
+    background:var(--cream);border:1px solid var(--line);color:var(--ink);
+    padding:13px 15px;font-family:var(--sans);font-size:0.92rem;border-radius:2px;width:100%;
+  }
+  .kontak form textarea{resize:vertical;}
+  .kontak form .btn{align-self:flex-start;}
+  .kontak form .success{display:none;color:var(--copper-dark);font-size:0.9rem;}
+  .kontak form .success.show{display:block;}
+  @media (max-width:860px){
+    .kontak-grid{grid-template-columns:1fr;gap:44px;}
+    .kontak form .row{flex-direction:column;}
+  }
+
+  /* ---------- SOCIAL STRIP ---------- */
+  .social-strip{padding:90px 0 100px;text-align:center;}
+  .social-strip h2{font-size:clamp(1.8rem,3.6vw,2.4rem);}
+  .social-strip .handle{color:var(--copper);font-weight:600;margin-top:10px;display:inline-block;}
+  .social-grid{margin-top:44px;display:grid;grid-template-columns:repeat(6,1fr);gap:2px;}
+  .social-grid .tile{aspect-ratio:1;background:var(--cream);position:relative;overflow:hidden;}
+  .social-grid .tile svg{position:absolute;inset:0;width:100%;height:100%;}
+  @media (max-width:760px){ .social-grid{grid-template-columns:repeat(3,1fr);} }
+
+  /* ---------- FOOTER ---------- */
+  footer.site{padding:90px 0 40px;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 0.8fr 0.8fr 1.3fr;gap:48px;padding-bottom:64px;border-bottom:1px solid var(--line-on-dark);}
+  .footer-grid h4{font-family:var(--sans);font-size:0.82rem;font-weight:700;text-transform:none;letter-spacing:0.01em;color:var(--copper);margin-bottom:18px;}
+  .footer-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .footer-grid a{text-decoration:none;color:rgba(237,235,225,0.78);font-size:0.94rem;}
+  .footer-grid a:hover{color:var(--oat);}
+  .footer-brand p{color:rgba(237,235,225,0.68);max-width:34ch;margin-top:14px;font-size:0.94rem;}
+  .social-icons{display:flex;gap:14px;margin-top:22px;}
+  .social-icons a{
+    width:36px;height:36px;border:1px solid var(--line-on-dark);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;transition:border-color .2s, background .2s;
+  }
+  .social-icons a:hover{border-color:var(--copper);background:rgba(42,88,182,0.12);}
+  .social-icons svg{width:16px;height:16px;}
+
+  .signup form{display:flex;flex-direction:column;gap:12px;max-width:360px;}
+  .signup .row{display:flex;gap:12px;}
+  .signup input{
+    background:transparent;border:1px solid var(--line-on-dark);color:var(--oat);
+    padding:12px 14px;font-family:var(--sans);font-size:0.9rem;border-radius:2px;width:100%;
+  }
+  .signup input::placeholder{color:rgba(237,235,225,0.45);}
+  .signup input:focus-visible{outline:2px solid var(--copper);outline-offset:2px;}
+  .signup .btn{margin-top:4px;justify-content:center;}
+  .signup .note{font-size:0.78rem;color:rgba(237,235,225,0.5);margin-top:6px;}
+  .signup .success{display:none;color:var(--copper);font-size:0.9rem;margin-top:8px;}
+  .signup .success.show{display:block;}
+
+  .footer-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+    padding-top:28px;font-size:0.82rem;color:rgba(237,235,225,0.5);
+  }
+  .footer-bottom a{text-decoration:underline;text-underline-offset:3px;color:inherit;}
+  .legal-panel{margin-top:24px;padding:22px 24px;background:rgba(237,235,225,0.06);border:1px solid var(--line-on-dark);}
+  .legal-panel h4{font-family:var(--sans);font-size:0.85rem;color:var(--copper);margin-bottom:10px;}
+  .legal-panel p{font-size:0.85rem;color:rgba(227,225,215,0.75);max-width:64ch;}
+
+  @media (max-width:860px){
+    .footer-grid{grid-template-columns:1fr 1fr;row-gap:40px;}
+  }
+  @media (max-width:520px){
+    .footer-grid{grid-template-columns:1fr;}
+    .signup .row{flex-direction:column;}
+  }
+
+  ::selection{background:var(--copper);color:var(--cream);}
+
+  /* ---------- LAPISAN FOTO (di atas ilustrasi SVG) ---------- */
+  /* Taruh foto di folder assets/images/... dengan nama file persis seperti di src="".
+     Jika file belum ada, foto otomatis disembunyikan dan ilustrasi SVG di baliknya tetap tampil. */
+  .art-photo{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:0;
+  }
+  .hero-slide .hero-inner{position:relative;z-index:2;}
+  .story-art, .art-wrap{position:relative;}
+  .social-grid .tile img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:1;
+  }
+
+  /* ---------- SKIP LINK (aksesibilitas) ---------- */
+  .skip-link{
+    position:absolute;left:12px;top:-60px;z-index:100;
+    background:var(--copper);color:var(--cream);
+    padding:12px 18px;border-radius:2px;font-family:var(--sans);font-weight:600;font-size:0.9rem;
+    text-decoration:none;transition:top .2s ease;
+  }
+  .skip-link:focus{top:12px;}
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed;right:22px;bottom:22px;z-index:70;
+    width:58px;height:58px;border-radius:50%;
+    background:#25D366;color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);text-decoration:none;
+    transition:transform .18s ease;
+  }
+  .wa-float:hover{transform:translateY(-2px) scale(1.04);}
+  .wa-float svg{width:28px;height:28px;}
+  .wa-float:focus-visible{outline:2px solid var(--copper);outline-offset:3px;}
+
+  /* ---------- BACK TO TOP ---------- */
+  .top-btn{
+    position:fixed;right:22px;bottom:90px;z-index:70;
+    width:44px;height:44px;border-radius:50%;
+    background:var(--bark);color:var(--oat);border:1px solid var(--line-on-dark);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;
+    opacity:0;pointer-events:none;transform:translateY(8px);
+    transition:opacity .2s ease, transform .2s ease;
+  }
+  .top-btn.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .top-btn:hover{background:var(--copper);}
+  .top-btn svg{width:18px;height:18px;}
+  @media (max-width:560px){
+    .wa-float{right:16px;bottom:16px;width:52px;height:52px;}
+    .top-btn{right:16px;bottom:78px;}
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+<a href="#top" class="skip-link">Lewati ke konten utama</a>
+
+<!-- Data terstruktur (Schema.org) agar Google bisa menampilkan ManyooKopi sebagai bisnis lokal di hasil pencarian (nama, cabang, jam buka). Perbarui alamat/telepon/koordinat begitu data asli tersedia. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "ManyooKopi",
+  "description": "ManyooKopi menyajikan kopi dan minuman racikan premium, dibuat segar setiap hari dari bahan pilihan.",
+  "url": "https://manyoo.id/",
+  "telephone": "+62-812-0000-0000",
+  "email": "halo@manyoo.id",
+  "sameAs": [
+    "https://instagram.com/manyoo.id"
+  ],
+  "location": [
+    {
+      "@type": "Place",
+      "name": "ManyooKopi Kemang",
+      "address": { "@type": "PostalAddress", "streetAddress": "Jl. Kemang Raya No. 12", "addressLocality": "Jakarta Selatan", "addressCountry": "ID" }
+    },
+    {
+      "@type": "Place",
+      "name": "ManyooKopi Dago",
+      "address": { "@type": "PostalAddress", "streetAddress": "Jl. Ir. H. Djuanda No. 45", "addressLocality": "Bandung", "addressCountry": "ID" }
+    },
+    {
+      "@type": "Place",
+      "name": "ManyooKopi Panakkukang",
+      "address": { "@type": "PostalAddress", "streetAddress": "Jl. Boulevard Panakkukang", "addressLocality": "Makassar", "addressCountry": "ID" }
+    }
+  ]
+}
+</script>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top" class="brand">ManyooKopi.</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#temukan">Toko Kami</a></li>
+        <li><a href="#cerita">Cerita Kami</a></li>
+        <li><a href="#kemitraan">Kemitraan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="#temukan" class="btn btn-outline" style="color:var(--oat)">Temukan Toko</a>
+      <a href="#menu" class="btn btn-copper">Pesan Sekarang</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Buka menu navigasi" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <!-- Slide 1 -->
+  <div class="hero-slide active" data-slide="0">
+    <svg class="art" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1400" height="900" fill="#101A30"/>
+      <circle cx="1120" cy="360" r="420" fill="#14213D"/>
+      <circle cx="1180" cy="300" r="300" fill="#1B2E5C"/>
+      <g opacity="0.9">
+        <path d="M980 520 h260 v170 a130 90 0 0 1 -260 0 z" fill="#2A58B6" opacity="0.15"/>
+        <ellipse cx="1110" cy="520" rx="130" ry="24" fill="#EDEBE1" opacity="0.9"/>
+        <path d="M980 530 q-40 10 -30 55 q10 40 55 35" fill="none" stroke="#EDEBE1" stroke-width="10" opacity="0.7" stroke-linecap="round"/>
+        <path d="M1050 460 q-10 -30 15 -50" stroke="#EDEBE1" stroke-width="6" fill="none" opacity="0.35" stroke-linecap="round"/>
+        <path d="M1100 445 q-10 -34 15 -55" stroke="#EDEBE1" stroke-width="6" fill="none" opacity="0.35" stroke-linecap="round"/>
+        <path d="M1150 460 q-10 -30 15 -50" stroke="#EDEBE1" stroke-width="6" fill="none" opacity="0.35" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <img class="art-photo" src="assets/images/hero/hero-1.jpg" alt="Kopi susu gula aren ManyooKopi" loading="eager" onerror="this.style.display='none'">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Racikan Musim Ini</div>
+      <h1>Yang Besar, <br><em>Kembali</em> Diseduh</h1>
+      <p>Kopi susu gula aren dengan lapisan krim kelapa panggang — hangat, pekat, dan hanya ada selama musim ini.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-copper">Lihat Menu</a>
+        <a href="#temukan" class="btn btn-ghost">Temukan Toko</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide" data-slide="1">
+    <svg class="art" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1400" height="900" fill="#1B2A4D"/>
+      <circle cx="260" cy="240" r="360" fill="#101A30"/>
+      <g transform="translate(230,380)">
+        <rect x="0" y="60" width="150" height="190" rx="14" fill="#C9A227" opacity="0.25"/>
+        <ellipse cx="75" cy="60" rx="75" ry="16" fill="#EDEBE1" opacity="0.9"/>
+        <rect x="55" y="-40" width="40" height="100" rx="8" fill="#EDEBE1" opacity="0.85"/>
+      </g>
+    </svg>
+    <img class="art-photo" src="assets/images/hero/hero-2.jpg" alt="Racikan ManyooKopi untuk keluarga dan teman" loading="lazy" onerror="this.style.display='none'">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Untuk Keluarga & Teman</div>
+      <h1>Cukup Untuk <br><em>Semua</em> Orang</h1>
+      <p>Satu nampan racikan dingin, gelas apa saja yang disukai — dari matcha yuzu sampai cokelat hazelnut.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-copper">Lihat Menu</a>
+        <a href="#temukan" class="btn btn-ghost">Temukan Toko</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide" data-slide="2">
+    <svg class="art" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1400" height="900" fill="#101A30"/>
+      <rect x="0" y="600" width="1400" height="300" fill="#14213D"/>
+      <g stroke="#EDEBE1" stroke-width="2" opacity="0.25">
+        <circle cx="1100" cy="220" r="6"/><circle cx="1150" cy="260" r="4"/><circle cx="1200" cy="200" r="5"/>
+        <circle cx="1080" cy="300" r="3"/><circle cx="1230" cy="300" r="4"/>
+      </g>
+      <g transform="translate(1000,300)">
+        <rect x="0" y="80" width="200" height="230" rx="18" fill="#2A58B6" opacity="0.2"/>
+        <ellipse cx="100" cy="80" rx="100" ry="20" fill="#EDEBE1" opacity="0.9"/>
+      </g>
+    </svg>
+    <img class="art-photo" src="assets/images/hero/hero-3.jpg" alt="ManyooKopi dibawa bepergian" loading="lazy" onerror="this.style.display='none'">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Praktis, Setiap Hari</div>
+      <h1>Nyaman <em>Dibawa</em> <br>Ke Mana Saja</h1>
+      <p>Pesan lewat aplikasi, ambil dalam lima menit — racikan segar tetap menemani hari sibuk Anda.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-copper">Lihat Menu</a>
+        <a href="#temukan" class="btn btn-ghost">Temukan Toko</a>
+      </div>
+    </div>
+  </div>
+
+  <button class="hero-arrow prev" id="heroPrev" aria-label="Slide sebelumnya">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="hero-arrow next" id="heroNext" aria-label="Slide berikutnya">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" data-dot="0" aria-label="Ke slide 1"></button>
+    <button class="hero-dot" data-dot="1" aria-label="Ke slide 2"></button>
+    <button class="hero-dot" data-dot="2" aria-label="Ke slide 3"></button>
+  </div>
+</section>
+
+<section class="story" id="cerita">
+  <div class="wrap">
+    <div class="story-art">
+      <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg">
+        <rect width="500" height="420" rx="6" fill="#101A30"/>
+        <g opacity="0.9">
+          <circle cx="150" cy="150" r="10" fill="#2A58B6"/>
+          <circle cx="180" cy="130" r="10" fill="#2A58B6" opacity="0.7"/>
+          <circle cx="210" cy="160" r="10" fill="#2A58B6" opacity="0.5"/>
+          <circle cx="140" cy="190" r="10" fill="#C9A227" opacity="0.8"/>
+          <circle cx="190" cy="200" r="10" fill="#2A58B6" opacity="0.6"/>
+        </g>
+        <path d="M120 260 q130 60 260 0 v40 q-130 60 -260 0 z" fill="#EDEBE1" opacity="0.08"/>
+        <text x="250" y="360" text-anchor="middle" fill="#EDEBE1" font-family="Fraunces, Georgia, serif" font-style="normal" font-size="20" opacity="0.55">Sejak dapur kecil, 2019</text>
+      </svg>
+      <img class="art-photo" src="assets/images/cerita/cerita-1.jpg" alt="Dapur kecil awal mula ManyooKopi" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div class="story-copy">
+      <div class="hero-eyebrow" style="color:#14213D">Cerita Kami</div>
+      <h2>Dari Dapur Kecil, Untuk Kebiasaan Harian Anda</h2>
+      <p>ManyooKopi dimulai dari satu meja racik kecil, dengan satu keyakinan sederhana: minuman yang baik tidak perlu rumit, cukup dibuat dengan bahan yang jujur dan waktu yang cukup. Dari situ, racikan kami tumbuh dari satu gerai menjadi kebiasaan banyak orang setiap hari.</p>
+      <div class="story-pillars">
+        <div>
+          <h3>Bahan Pilihan</h3>
+          <p>Biji kopi dan bahan racikan dipilih langsung dari mitra petani lokal tepercaya.</p>
+        </div>
+        <div>
+          <h3>Diracik Segar</h3>
+          <p>Tidak ada stok semalam — setiap gelas dibuat saat dipesan.</p>
+        </div>
+        <div>
+          <h3>Untuk Semua Orang</h3>
+          <p>Dari yang baru mengenal kopi sampai penikmat berat, ada racikan yang pas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find band-cream" id="temukan">
+  <div class="wrap">
+    <div>
+      <h2>Temukan ManyooKopi Terdekat</h2>
+      <p>Cek jam buka, menu lokal, dan info katering di gerai ManyooKopi dekat Anda. Kami menunggu kedatangan Anda.</p>
+      <div class="actions">
+        <a href="#daftar-lokasi" class="btn btn-copper">Cari Lokasi</a>
+      </div>
+    </div>
+    <div class="map-art">
+      <div id="lokasi-map" role="img" aria-label="Peta lokasi gerai ManyooKopi"></div>
+    </div>
+  </div>
+
+  <div class="wrap" id="daftar-lokasi">
+    <div class="location-grid">
+      <div class="location-card card-dark" data-lat="-6.2608" data-lng="106.8208" data-status="open">
+        <div class="badge">Buka Sekarang</div>
+        <h3>ManyooKopi Kemang</h3>
+        <p class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jl. Kemang Raya No. 12, Jakarta Selatan</p>
+        <p class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Setiap hari · 07.00 – 22.00</p>
+      </div>
+      <div class="location-card card-blue" data-lat="-6.9018" data-lng="107.6170" data-status="open">
+        <div class="badge">Buka Sekarang</div>
+        <h3>ManyooKopi Dago</h3>
+        <p class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jl. Ir. H. Djuanda No. 45, Bandung</p>
+        <p class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Setiap hari · 08.00 – 21.30</p>
+      </div>
+      <div class="location-card card-white" data-lat="-5.1467" data-lng="119.4623" data-status="open">
+        <div class="badge">Buka Sekarang</div>
+        <h3>ManyooKopi Panakkukang</h3>
+        <p class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jl. Boulevard Panakkukang, Makassar</p>
+        <p class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Setiap hari · 08.00 – 22.00</p>
+      </div>
+      <div class="location-card card-gold" data-lat="-6.9899" data-lng="110.4229" data-status="soon">
+        <div class="badge soon">Segera Hadir</div>
+        <h3>ManyooKopi Simpang Lima</h3>
+        <p class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jl. Pahlawan, Semarang</p>
+        <p class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Buka awal musim depan</p>
+      </div>
+    </div>
+    <p class="location-note">Koordinat 4 lokasi di atas adalah perkiraan berdasarkan nama jalan yang tertulis (data sementara) — saat alamat gerai asli sudah final, cukup ganti nilai <code>data-lat</code> / <code>data-lng</code> pada tiap kartu di HTML (cari koordinat presisi lewat Google Maps: klik kanan titik lokasi → salin koordinatnya) dan peta akan otomatis menyesuaikan.</p>
+  </div>
+</section>
+
+<section class="menu-h band-dark" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>Menu Lengkap ManyooKopi</h2>
+        <p>Racikan kopi, non-kopi, dan camilan pendamping — semua dibuat segar setiap gelas dan setiap piring.</p>
+      </div>
+    </div>
+
+    <div class="menu-tabs" role="tablist">
+      <button class="menu-tab active" data-cat="kopi" role="tab" aria-selected="true">Kopi</button>
+      <button class="menu-tab" data-cat="nonkopi" role="tab" aria-selected="false">Non-Kopi</button>
+      <button class="menu-tab" data-cat="camilan" role="tab" aria-selected="false">Camilan</button>
+    </div>
+
+    <div class="menu-grid" data-panel="kopi">
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/kopi-1.jpg" alt="Kopi Susu Gula Aren" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18h24l-2 16a6 6 0 0 1-6 5H18a6 6 0 0 1-6-5L10 18z"/><path d="M34 20h4a5 5 0 0 1 0 10h-3"/><path d="M16 12c0-2 2-3 2-5M24 12c0-2 2-3 2-5"/></svg>
+        <h3>Kopi Susu Gula Aren</h3>
+        <p class="desc">Espresso, susu segar, gula aren asli Nusantara.</p>
+        <div class="price">Rp 28.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/kopi-2.jpg" alt="Cold Brew Kelapa" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="14" y="10" width="20" height="30" rx="4"/><path d="M18 18h12M18 24h12"/></svg>
+        <h3>Cold Brew Kelapa</h3>
+        <p class="desc">Cold brew 18 jam dituang di atas es kelapa muda.</p>
+        <div class="price">Rp 30.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/kopi-3.jpg" alt="Americano Panggang" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="24" r="14"/><path d="M24 14v10l7 5"/></svg>
+        <h3>Americano Panggang</h3>
+        <p class="desc">Biji house-blend sangrai medium-dark, sederhana dan tegas.</p>
+        <div class="price">Rp 22.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/kopi-4.jpg" alt="Kopi Tubruk ManyooKopi" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 10v10a10 10 0 0 0 20 0V10"/><path d="M10 10h28"/></svg>
+        <h3>Kopi Tubruk ManyooKopi</h3>
+        <p class="desc">Kopi robusta giling kasar, diseduh cara tradisional.</p>
+        <div class="price">Rp 20.000</div>
+      </div>
+    </div>
+
+    <div class="menu-grid" data-panel="nonkopi" hidden>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/nonkopi-1.jpg" alt="Matcha Yuzu Latte" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20h24v10a12 12 0 0 1-24 0V20z"/><path d="M18 20V12M24 20V10M30 20V12"/></svg>
+        <h3>Matcha Yuzu Latte</h3>
+        <p class="desc">Matcha ceremonial dengan sentuhan yuzu segar.</p>
+        <div class="price">Rp 32.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/nonkopi-2.jpg" alt="Choco Hazelnut Frappe" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 6c6 8 10 14 10 20a10 10 0 1 1-20 0c0-6 4-12 10-20z"/></svg>
+        <h3>Choco Hazelnut Frappe</h3>
+        <p class="desc">Cokelat Belgia, hazelnut panggang, krim tebal.</p>
+        <div class="price">Rp 34.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/nonkopi-3.jpg" alt="Lemon Tea ManyooKopi" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 14h32l-4 24H12L8 14z"/><path d="M16 8h16"/></svg>
+        <h3>Lemon Tea ManyooKopi</h3>
+        <p class="desc">Teh hitam pilihan, perasan lemon, madu hutan.</p>
+        <div class="price">Rp 24.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/nonkopi-4.jpg" alt="Strawberry Yogurt Smoothie" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 8c-8 6-14 12-14 20a14 14 0 0 0 28 0c0-8-6-14-14-20z"/></svg>
+        <h3>Strawberry Yogurt Smoothie</h3>
+        <p class="desc">Stroberi segar, yogurt, sedikit madu.</p>
+        <div class="price">Rp 29.000</div>
+      </div>
+    </div>
+
+    <div class="menu-grid" data-panel="camilan" hidden>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/camilan-1.jpg" alt="Croissant Almond" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="16" width="28" height="18" rx="3"/><path d="M10 22h28"/></svg>
+        <h3>Croissant Almond</h3>
+        <p class="desc">Dipanggang setiap pagi, taburan almond panggang.</p>
+        <div class="price">Rp 25.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/camilan-2.jpg" alt="Banana Bread Slice" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="12" y="12" width="24" height="24" rx="4"/><path d="M18 24h12M24 18v12"/></svg>
+        <h3>Banana Bread Slice</h3>
+        <p class="desc">Pisang matang, kenari panggang, tekstur lembap.</p>
+        <div class="price">Rp 22.000</div>
+      </div>
+      <div class="menu-card">
+        <img class="menu-photo" src="assets/images/menu/camilan-3.jpg" alt="Cookies Dark Choco" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="7"/></svg>
+        <h3>Cookies Dark Choco</h3>
+        <p class="desc">Renyah di luar, lumer di dalam, cokelat 60%.</p>
+        <div class="price">Rp 15.000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="franchise band-cream" id="kemitraan">
+  <div class="wrap">
+    <div class="art-wrap">
+      <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg">
+        <rect width="500" height="420" rx="6" fill="#101A30"/>
+        <g transform="translate(100,90)">
+          <rect x="0" y="0" width="300" height="180" rx="10" fill="#14213D" stroke="#2A58B6" stroke-width="2"/>
+          <rect x="24" y="24" width="80" height="60" rx="4" fill="#2A58B6" opacity="0.35"/>
+          <rect x="118" y="24" width="80" height="60" rx="4" fill="#2A58B6" opacity="0.2"/>
+          <rect x="212" y="24" width="64" height="60" rx="4" fill="#2A58B6" opacity="0.5"/>
+          <rect x="24" y="100" width="252" height="10" rx="5" fill="#EDEBE1" opacity="0.3"/>
+          <rect x="24" y="120" width="180" height="10" rx="5" fill="#EDEBE1" opacity="0.2"/>
+        </g>
+        <text x="250" y="330" text-anchor="middle" fill="#EDEBE1" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="22" opacity="0.7">ManyooKopi</text>
+      </svg>
+      <img class="art-photo" src="assets/images/kemitraan/kemitraan-1.jpg" alt="Interior gerai ManyooKopi" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div>
+      <h2>Miliki Gerai ManyooKopi</h2>
+      <p>Kami mencari mitra yang percaya pada racikan berkualitas dan pelayanan yang hangat. Bergabunglah membangun ManyooKopi di kota Anda, dengan dukungan penuh dari resep hingga operasional harian.</p>
+      <div class="actions">
+        <a href="#kontak" class="btn btn-copper">Ajukan Kemitraan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimoni band-cream" id="testimoni">
+  <div class="wrap">
+    <div class="section-head" style="color:var(--ink)">
+      <div>
+        <h2 style="color:var(--ink)">Kata Pelanggan</h2>
+        <p style="color:rgba(20,33,61,0.68)">Cerita singkat dari mereka yang sudah mencoba racikan ManyooKopi.</p>
+      </div>
+    </div>
+    <div class="testimoni-grid">
+      <div class="testimoni-card">
+        <p class="quote-text">"Kopi susu gula arennya jadi rutinitas pagi saya. Rasanya konsisten setiap kali datang."</p>
+        <div class="who">— Dinda, pelanggan tetap ManyooKopi Kemang</div>
+      </div>
+      <div class="testimoni-card">
+        <p class="quote-text">"Tempatnya nyaman buat kerja sambil ngopi, dan matcha yuzu-nya jadi favorit baru saya."</p>
+        <div class="who">— Reza, pelanggan ManyooKopi Dago</div>
+      </div>
+      <div class="testimoni-card">
+        <p class="quote-text">"Pesan katering untuk acara kantor, semua tamu suka. Prosesnya juga gampang."</p>
+        <div class="who">— Amel, klien katering ManyooKopi</div>
+      </div>
+    </div>
+    <p class="location-note">Contoh testimoni di atas masih data sementara — ganti dengan ulasan pelanggan asli Anda.</p>
+  </div>
+</section>
+
+<section class="quote-band band-dark">
+  <div class="wrap">
+    <blockquote>“Diseduh pelan, disajikan hangat — ManyooKopi adalah jeda kecil di tengah hari yang panjang.”</blockquote>
+    <cite>Filosofi Racikan ManyooKopi</cite>
+  </div>
+</section>
+
+<section class="kontak band-cream" id="kontak">
+  <div class="wrap">
+    <div class="kontak-grid">
+      <div>
+        <h2>Hubungi Kami</h2>
+        <p>Untuk pertanyaan umum, kemitraan, katering, atau karier — kirim pesan lewat form ini, tim ManyooKopi akan membalas secepatnya.</p>
+        <ul class="kontak-info">
+          <li>halo@manyoo.id</li>
+          <li>+62 812-0000-0000</li>
+          <li>Senin – Sabtu, 09.00 – 18.00 WIB</li>
+        </ul>
+      </div>
+      <form id="kontakForm">
+        <div class="row">
+          <input type="text" placeholder="Nama lengkap" required aria-label="Nama lengkap">
+          <input type="email" placeholder="Alamat email" required aria-label="Alamat email">
+        </div>
+        <select required aria-label="Topik pesan">
+          <option value="" disabled selected>Pilih topik</option>
+          <option value="umum">Pertanyaan Umum</option>
+          <option value="kemitraan">Kemitraan / Franchise</option>
+          <option value="katering">Katering</option>
+          <option value="karier">Karier</option>
+        </select>
+        <textarea rows="4" placeholder="Tulis pesan Anda" required aria-label="Pesan"></textarea>
+        <button type="submit" class="btn btn-copper">Kirim Pesan</button>
+        <div class="success" id="kontakSuccess">Terima kasih! Pesan Anda sudah kami terima dan akan segera dibalas.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="social-strip">
+  <div class="wrap">
+    <h2>Ikuti Keseharian ManyooKopi</h2>
+    <a href="#" class="handle">@manyoo.id</a>
+    <div class="social-grid">
+      <div class="tile"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#2A58B6" opacity="0.85"/><circle cx="50" cy="55" r="22" fill="#F5F3EC" opacity="0.9"/></svg><img src="assets/images/sosial/sosial-1.jpg" alt="Postingan Instagram ManyooKopi 1" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="tile"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#14213D"/><rect x="30" y="30" width="40" height="50" rx="6" fill="#EDEBE1" opacity="0.8"/></svg><img src="assets/images/sosial/sosial-2.jpg" alt="Postingan Instagram ManyooKopi 2" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="tile"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#C9A227" opacity="0.85"/><circle cx="50" cy="50" r="30" fill="none" stroke="#F5F3EC" stroke-width="4" opacity="0.8"/></svg><img src="assets/images/sosial/sosial-3.jpg" alt="Postingan Instagram ManyooKopi 3" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="tile"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#101A30"/><path d="M20 70 Q50 20 80 70" stroke="#2A58B6" stroke-width="5" fill="none"/></svg><img src="assets/images/sosial/sosial-4.jpg" alt="Postingan Instagram ManyooKopi 4" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="tile"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#DAD7C9"/><rect x="35" y="20" width="30" height="60" rx="8" fill="#14213D" opacity="0.7"/></svg><img src="assets/images/sosial/sosial-5.jpg" alt="Postingan Instagram ManyooKopi 5" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="tile"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#2A58B6" opacity="0.6"/><circle cx="35" cy="40" r="10" fill="#F5F3EC"/><circle cx="65" cy="60" r="14" fill="#F5F3EC" opacity="0.7"/></svg><img src="assets/images/sosial/sosial-6.jpg" alt="Postingan Instagram ManyooKopi 6" loading="lazy" onerror="this.style.display='none'"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site band-dark" id="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">ManyooKopi.</a>
+        <p>Racikan kopi dan minuman segar, dibuat setiap hari dengan bahan pilihan — dari dapur kami ke keseharian Anda.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram ManyooKopi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook ManyooKopi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8h-2a2 2 0 0 0-2 2v10M9 13h6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#temukan">Toko Kami</a></li>
+          <li><a href="#cerita">Cerita Kami</a></li>
+          <li><a href="#kemitraan">Kemitraan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="#kontak">Karier</a></li>
+          <li><a href="#kontak">Katering</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="#" class="legal-link" data-legal="privasi">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      <div class="signup">
+        <h4>Kabar ManyooKopi</h4>
+        <form id="signupForm">
+          <div class="row">
+            <input type="text" placeholder="Nama depan" required aria-label="Nama depan">
+            <input type="text" placeholder="Nama belakang" required aria-label="Nama belakang">
+          </div>
+          <input type="email" placeholder="Alamat email" required aria-label="Alamat email">
+          <button type="submit" class="btn btn-copper">Berlangganan</button>
+          <div class="success" id="signupSuccess">Terima kasih! Anda akan menerima kabar terbaru dari ManyooKopi.</div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ManyooKopi. Seluruh hak cipta dilindungi.</span>
+      <span><a href="#" class="legal-link" data-legal="syarat">Syarat Penggunaan</a> · <a href="#" class="legal-link" data-legal="privasi">Privasi</a></span>
+    </div>
+
+    <div class="legal-panel" id="legalPrivasi" hidden>
+      <h4>Kebijakan Privasi</h4>
+      <p>Ini teks placeholder. Ganti dengan kebijakan privasi resmi ManyooKopi yang menjelaskan data apa saja yang dikumpulkan dari pelanggan (misalnya lewat form ini atau program loyalitas), untuk apa data itu dipakai, dan bagaimana pelanggan bisa meminta datanya dihapus.</p>
+    </div>
+    <div class="legal-panel" id="legalSyarat" hidden>
+      <h4>Syarat Penggunaan</h4>
+      <p>Ini teks placeholder. Ganti dengan syarat & ketentuan resmi penggunaan situs dan layanan ManyooKopi, termasuk aturan pemesanan, pembatalan, dan tanggung jawab masing-masing pihak.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6281200000000?text=Halo%20ManyooKopi%2C%20saya%20ingin%20bertanya" target="_blank" rel="noopener" aria-label="Chat WhatsApp ManyooKopi">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.37.7 4.58 1.9 6.44L4 29l7.74-1.86A11.96 11.96 0 0 0 16.02 27C22.63 27 28 21.62 28 15S22.63 3 16.02 3zm0 21.8c-1.9 0-3.72-.5-5.3-1.44l-.38-.22-4.6 1.1 1.13-4.5-.25-.4A9.75 9.75 0 0 1 5.2 15c0-5.98 4.86-10.83 10.82-10.83S26.84 9.02 26.84 15 21.98 24.8 16.02 24.8zm5.98-8.1c-.32-.16-1.9-.94-2.2-1.04-.3-.1-.5-.16-.72.16-.22.32-.83 1.04-1.02 1.26-.19.22-.37.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.5.14-.66.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.1-.22.05-.4-.02-.56-.08-.16-.72-1.74-.98-2.38-.26-.62-.53-.54-.72-.55h-.62c-.22 0-.56.08-.86.4-.3.32-1.12 1.1-1.12 2.68 0 1.58 1.15 3.1 1.31 3.32.16.22 2.26 3.46 5.48 4.85.77.33 1.36.53 1.83.68.77.24 1.47.2 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z"/></svg>
+</a>
+<button class="top-btn" id="topBtn" aria-label="Kembali ke atas" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+  // Mobile nav toggle
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  hamburgerBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Menu category tabs
+  const menuTabs = document.querySelectorAll('.menu-tab');
+  const menuPanels = document.querySelectorAll('.menu-grid[data-panel]');
+  menuTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      menuTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active'); tab.setAttribute('aria-selected','true');
+      const cat = tab.dataset.cat;
+      menuPanels.forEach(p => { p.hidden = p.dataset.panel !== cat; });
+    });
+  });
+
+  // Hero slider
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  let current = 0;
+  let autoTimer;
+
+  function goTo(index){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function startAuto(){
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 6000);
+  }
+  document.getElementById('heroNext').addEventListener('click', () => { goTo(current+1); startAuto(); });
+  document.getElementById('heroPrev').addEventListener('click', () => { goTo(current-1); startAuto(); });
+  dots.forEach((dot,i) => dot.addEventListener('click', () => { goTo(i); startAuto(); }));
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!prefersReducedMotion){ startAuto(); }
+
+  // Signup form (visual only, no backend)
+  const form = document.getElementById('signupForm');
+  const success = document.getElementById('signupSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    success.classList.add('show');
+    form.reset();
+  });
+
+  // Contact/partnership form (visual only, no backend)
+  const kontakForm = document.getElementById('kontakForm');
+  const kontakSuccess = document.getElementById('kontakSuccess');
+  kontakForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    kontakSuccess.classList.add('show');
+    kontakForm.reset();
+  });
+
+  // Legal panel toggles (Kebijakan Privasi / Syarat Penggunaan)
+  const legalPanels = { privasi: document.getElementById('legalPrivasi'), syarat: document.getElementById('legalSyarat') };
+  document.querySelectorAll('.legal-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const key = link.dataset.legal;
+      Object.entries(legalPanels).forEach(([k, panel]) => {
+        if(k === key){ panel.hidden = !panel.hidden; if(!panel.hidden) panel.scrollIntoView({behavior:'smooth', block:'center'}); }
+        else { panel.hidden = true; }
+      });
+    });
+  });
+
+  // Tombol kembali ke atas
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('show', window.scrollY > 600);
+  });
+  topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
+</script>
+
+<!-- ================= PETA LOKASI (Leaflet + OpenStreetMap, gratis & tanpa API key) ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+(function(){
+  const mapEl = document.getElementById('lokasi-map');
+  if(!mapEl || typeof L === 'undefined') return;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const cards = Array.from(document.querySelectorAll('.location-card[data-lat]'));
+  const locations = cards.map((card, i) => ({
+    card,
+    name: card.querySelector('h3').textContent.trim(),
+    addr: card.querySelector('.addr').textContent.trim(),
+    hours: card.querySelector('.hours').textContent.trim(),
+    status: card.dataset.status,
+    lat: parseFloat(card.dataset.lat),
+    lng: parseFloat(card.dataset.lng)
+  }));
+
+  // Peta dipusatkan di Indonesia agar ke-4 lokasi (Jakarta, Bandung, Makassar, Semarang) langsung terlihat
+  const map = L.map('lokasi-map', { scrollWheelZoom: false, zoomControl: true });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  function pinIcon(status){
+    return L.divIcon({
+      className: '',
+      html: '<div class="mk-pin' + (status === 'soon' ? ' soon' : '') + '"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7 2 3 6 3 11c0 6.5 9 11 9 11s9-4.5 9-11c0-5-4-9-9-9zm0 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></div>',
+      iconSize: [34, 34],
+      iconAnchor: [17, 30],
+      popupAnchor: [0, -30]
+    });
+  }
+
+  const markers = locations.map(loc => {
+    if (isNaN(loc.lat) || isNaN(loc.lng)) return null;
+    const marker = L.marker([loc.lat, loc.lng], { icon: pinIcon(loc.status) }).addTo(map);
+    marker.bindPopup('<b>' + loc.name + '</b>' + loc.addr + '<br>' + loc.hours);
+    marker.on('click', () => setActive(loc.card));
+    loc.marker = marker;
+    return marker;
+  }).filter(Boolean);
+
+  // Pastikan ke-4 lokasi terdeteksi & pas dalam satu tampilan peta
+  if (markers.length) {
+    const group = L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.35));
+  } else {
+    map.setView([-2.5, 118], 4.3); // fallback: tampilan seluruh Indonesia
+  }
+
+  function setActive(card){
+    cards.forEach(c => c.classList.toggle('is-active', c === card));
+  }
+
+  // Klik kartu lokasi -> peta terbang & zoom ke gerai tsb, popup terbuka
+  locations.forEach(loc => {
+    if (!loc.marker) return;
+    loc.card.addEventListener('click', () => {
+      setActive(loc.card);
+      map.flyTo([loc.lat, loc.lng], 14, { duration: 0.8 });
+      loc.marker.openPopup();
+      document.getElementById('lokasi-map').scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+    });
+  });
+
+  // Perbaiki ukuran peta setelah gambar/layout final (mis. saat section baru terlihat)
+  setTimeout(() => map.invalidateSize(), 200);
+  window.addEventListener('resize', () => map.invalidateSize());
+})();
+</script>
+
+</body>
+</html>
