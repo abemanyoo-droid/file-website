@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manyoo.perkakasonline.workers.dev/sitemap.xml
